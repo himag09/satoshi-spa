@@ -3,7 +3,6 @@ $titulo = 'Inicio';
 include './includes/templates/header.php';
 include './includes/templates/navegacion.php';
 include './includes/funciones/funciones.php';
-
 ?>
 
 <div class="container">
@@ -81,7 +80,6 @@ include './includes/funciones/funciones.php';
                 <div class="row justify-content-center no-gutters">
                     <div class="col-md-10 pt-4 servicio-info">
                         <h2 class="text-center text-uppercase encabezado">
-                            <!-- dblock -->
                             <span class="text-lowercase">nuestros</span> servicios
                         </h2>
                         <a href="#" class="btn btn-primary btn-block text-uppercase mt-4 py-3">Leer más</a>
@@ -97,7 +95,6 @@ include './includes/funciones/funciones.php';
                 <div class="row justify-content-center no-gutters">
                     <div class="col-md-10 pt-4 servicio-info">
                         <h2 class="text-center text-uppercase encabezado">
-                            <!-- dblock -->
                             <span class="text-lowercase">visita nuestra</span> tienda
                         </h2>
                         <a href="#" class="btn btn-primary btn-block text-uppercase mt-4 py-3">Leer más</a>
@@ -110,7 +107,6 @@ include './includes/funciones/funciones.php';
     </div>
     <!--row-->
 </div>
-
 
 <div class="horario mt-5">
     <div class="container">
@@ -207,7 +203,6 @@ include './includes/funciones/funciones.php';
     <!--row-->
 </section>
 <!--productos-->
-
 
 <?php
 include './includes/templates/citas.php';

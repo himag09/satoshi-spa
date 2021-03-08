@@ -17,7 +17,7 @@ include './includes/templates/navegacion.php';
             <h2 class="d-block d-md-none text-uppercase text-center">
                 Contacto
             </h2>
-            <form class="p-5 mt-5 formulario-contacto needs-validation" novalidate>
+            <form class="p-5 mt-5 formulario-contacto needs-validation" method="POST" novalidate>
                 <div class="form-group">
                     <label for="nombre">Nombre:</label>
                     <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required>

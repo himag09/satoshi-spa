@@ -20,19 +20,26 @@
                     var xhr = new XMLHttpRequest();
 
                     // abrir la conexion
-                    xhr.open('POST','http://localhost/satoshi_spa/includes/funciones/enviar.php', true);
+                    xhr.open('POST','includes/funciones/enviar.php', true);
                     // siempre usar header con form
-                    xhr.setRequestHeader('Content-type', 'application-/x-www-form-urlencoded');
+                    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
                     // revisar el estado 
                     xhr.onload = function() {
                         if (xhr.status === 200) {
-                            console.log(xhr.responseText);
                             var respuesta = JSON.parse(xhr.responseText);
-                            console.log(respuesta);
+                            if (respuesta.respuesta === true) {
+                                var div = document.createElement('div');
+                                div.appendChild(document.createTextNode('Se envio correctamente'));
+                                div.classList.add('alert', 'alert-success', 'mt-4', 'text-center');
+                                document.querySelector('form').appendChild(div);
+                                setTimeout(() => {
+                                    document.querySelector('.alert').remove();
+                                }, 3600);
+                            }
                         }
                     }
                     // enviar el request
-                    xhr.send('nombre='+nombre+'&email='+email+'&mensaje='+mensaje);
+                    xhr.send("nombre="+nombre+"&email="+email+"&mensaje="+mensaje);
                 }
                 form.classList.add('was-validated');
             }, false);
